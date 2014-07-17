@@ -1,4 +1,4 @@
 class Video < ActiveRecord::Base
+  has_many :user_videos
+  has_many :users, through: :user_videos
 end
-
-# rails generate model Video title:string youtube_id:string description:text
